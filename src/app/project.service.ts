@@ -15,4 +15,10 @@ export class ProjectService {
      console.log(this.projects)
      return this.projects;
    }
+
+   createProject(projectToCreate: Project)
+   {
+     console.log(projectToCreate);
+     this.projects.push(projectToCreate);
+   }
 }

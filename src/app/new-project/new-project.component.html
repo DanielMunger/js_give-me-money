@@ -1,0 +1,18 @@
+<h2>Create a New Project</h2>
+<div>
+  <label for="category">Select A Category:</label>
+  <select #category>
+    <option value="art">Art</option>
+    <option value="design">Design</option>
+    <option value="food">Food</option>
+    <option value="photography">Photography</option>
+    <option value="technology">Technology</option>
+  </select>
+  <label>Title:</label>
+  <input #title name="title">
+  <label>Description:</label>
+  <textarea #description  rows="4" cols="40"></textarea>
+  <label>Fundraising Goal:</label>
+  <input #goal type="number">
+  <button (click)="createProject(category.value, title.value, description.value, goal.value); title.value=''; description.value=''; goal.value='' ">Create Project</button>
+</div>
