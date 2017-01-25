@@ -1,9 +1,17 @@
-
+<br>
+<select class="select" (change)="onChange($event.target.value)">
+  <option selected="selected" value="all">GiveMeMoney Categories</option>
+  <option value="art">Art</option>
+  <option value="design">Design</option>
+  <option value="food">Food</option>
+  <option value="photography">Photography</option>
+  <option value="technology">Technology</option>
+</select>
 <div class="row">
-   <div *ngFor="let project of projects | async" class="col s12 m4">
+   <div *ngFor="let project of projects | async | categoryFilter:categoryToFilter" class="col s12 m4">
      <div  class="card">
        <div class="card-image">
-         <img src="">
+         <img src="http://placehold.it/350x350">
        </div>
        <h5>{{project.title}}</h5>
        <div class="card-content">
