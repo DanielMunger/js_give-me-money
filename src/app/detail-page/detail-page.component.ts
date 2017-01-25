@@ -1,15 +1,27 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
+import { Project } from '../project.model';
+import { ProjectService } from '../project.service';
+import { FirebaseObjectObservable } from 'angularfire2';
 
 @Component({
   selector: 'app-detail-page',
   templateUrl: './detail-page.component.html',
-  styleUrls: ['./detail-page.component.css']
+  styleUrls: ['./detail-page.component.css'],
+  providers: [ProjectService]
 })
 export class DetailPageComponent implements OnInit {
+  projectId: string;
+  projectToDisplay;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private projectService: ProjectService) { }
 
   ngOnInit() {
+    this.route.params.forEach((urlParametersArray) => {
+      this.projectId = urlParametersArray['id'];
+    })
+    this.projectToDisplay = this.projectService.getProjectById(this.projectId);
   }
 
 }

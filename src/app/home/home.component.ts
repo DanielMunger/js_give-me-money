@@ -13,10 +13,14 @@ import { Project } from '../project.model'
 export class HomeComponent implements OnInit {
   projects: FirebaseListObservable<any[]>;
 
-  constructor(private projectService: ProjectService) { }
+  constructor(private router: Router, private projectService: ProjectService) { }
 
   ngOnInit() {
     this.projects = this.projectService.getProjects();
+  }
+
+  goToDetailPage(project) {
+    this.router.navigate(['projects', project.$key])
   }
 
 }

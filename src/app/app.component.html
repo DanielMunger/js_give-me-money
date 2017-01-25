@@ -1,4 +1,15 @@
-<h1>
-  {{title}}
-</h1>
-<router-outlet></router-outlet>
+<nav>
+   <div class="nav-wrapper blue">
+     <div class="container">
+       <a href="#" class="brand-logo">Logo</a>
+       <ul id="nav-mobile" class="right hide-on-med-and-down">
+         <li><a routerLink="">Home</a></li>
+         <li><a routerLink="start">New Project</a></li>
+       </ul>
+
+     </div>
+   </div>
+ </nav>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

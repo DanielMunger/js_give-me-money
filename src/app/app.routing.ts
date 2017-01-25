@@ -10,7 +10,7 @@ const appRoutes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'detail',
+    path: 'projects/:id',
     component: DetailPageComponent
   },
   {
