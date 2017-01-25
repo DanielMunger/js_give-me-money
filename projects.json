@@ -1,0 +1,23 @@
+{ "projects": [{
+    "category": "cameras",
+    "title": "Pink Floyd's camera",
+    "description": "A live  album by the English progressive rock band originally released in 1995, on the label EMI in the United Kingdom.",
+    "goal":  24,
+    "progress": 0,
+    "contributors": 0
+    }, {
+    "category": "cameras",
+    "title": "Webcam cover",
+    "description": "A live  album by the English progressive rock band originally released in 1995, on the label EMI in the United Kingdom.",
+    "goal":  24,
+    "progress": 0,
+    "contributors": 0
+    }, {
+    "category": "cameras",
+    "title": "Pink Floyd's webcam cover",
+    "description": "A live  album by the English progressive rock band originally released in 1995, on the label EMI in the United Kingdom.",
+    "goal":  24,
+    "progress": 0,
+    "contributors": 0
+    }]
+}
