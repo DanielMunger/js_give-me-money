@@ -1,0 +1,11 @@
+.bar {
+  height: 20px;
+  background-color: blue;
+  /*margin: 5px;*/
+}
+
+#chart {
+  margin-left: 15px;
+  margin-right: 15px; 
+  margin-bottom: 15px;
+}

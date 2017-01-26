@@ -14,6 +14,8 @@ import { FirebaseObjectObservable } from 'angularfire2';
 export class DetailPageComponent implements OnInit {
   projectId: string;
   projectToDisplay;
+  percentComplete: number;
+
 
   constructor(private route: ActivatedRoute, private projectService: ProjectService) { }
 
@@ -28,7 +30,11 @@ export class DetailPageComponent implements OnInit {
 
     var numberAmount = parseInt(amount)
     var projectObject = null;
-    this.projectToDisplay.subscribe(result => projectObject = result);
+    this.projectToDisplay.subscribe(result => {
+      projectObject = result
+      console.log("in donate func", projectObject.progress)
+      this.percentComplete = projectObject.progress/projectObject.goal
+    });
     this.projectService.addDonation(numberAmount, projectObject)
   }
 }

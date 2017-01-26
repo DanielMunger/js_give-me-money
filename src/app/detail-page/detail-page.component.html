@@ -12,10 +12,11 @@
          <p>Progress: {{(projectToDisplay | async)?.progress}}</p>
          <p>Contributors: {{(projectToDisplay | async)?.contributors}}</p>
        </div>
+       <app-bar-graph [percentComplete]="percentComplete"></app-bar-graph>
        <div class="card-action">
            <label>Amount:</label>
            <input #amount name="amount" type="number">
-           <button class="btn blue" (click)="donateMoney(amount.value); amount.value=''">Create Project</button>
+           <button class="btn blue" (click)="donateMoney(amount.value); amount.value=''">Donate</button>
        </div>
      </div>
    </div>
