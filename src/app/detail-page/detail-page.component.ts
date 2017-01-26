@@ -24,4 +24,11 @@ export class DetailPageComponent implements OnInit {
     this.projectToDisplay = this.projectService.getProjectById(this.projectId);
   }
 
+  donateMoney(amount) {
+
+    var numberAmount = parseInt(amount)
+    var projectObject = null;
+    this.projectToDisplay.subscribe(result => projectObject = result);
+    this.projectService.addDonation(numberAmount, projectObject)
+  }
 }

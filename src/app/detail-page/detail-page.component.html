@@ -1,3 +1,22 @@
-<p>
-  {{(projectToDisplay | async)?.title}}
-</p>
+
+<div class="row">
+   <div class="col m12">
+     <div  class="card">
+       <div class="card-image">
+         <img src="http://placehold.it/350x350">
+       </div>
+       <div class="card-content">
+         <h5>{{(projectToDisplay | async)?.title}}</h5>
+         <p>{{(projectToDisplay | async)?.description}}</p>
+         <p>Goal: {{(projectToDisplay | async)?.goal}}</p>
+         <p>Progress: {{(projectToDisplay | async)?.progress}}</p>
+         <p>Contributors: {{(projectToDisplay | async)?.contributors}}</p>
+       </div>
+       <div class="card-action">
+           <label>Amount:</label>
+           <input #amount name="amount" type="number">
+           <button class="btn blue" (click)="donateMoney(amount.value); amount.value=''">Create Project</button>
+       </div>
+     </div>
+   </div>
+ </div>

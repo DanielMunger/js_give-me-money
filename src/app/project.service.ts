@@ -25,5 +25,11 @@ export class ProjectService {
    getProjectById(projectId) {
      return this.angularFire.database.object('/projects/' + projectId)
    }
-   
+
+   addDonation(amount, projectToDonateTo) {
+     var projectInFirebase = this.getProjectById(projectToDonateTo.$key);
+
+     projectInFirebase.update({progress: (amount + projectToDonateTo.progress)})
+   }
+
 }
