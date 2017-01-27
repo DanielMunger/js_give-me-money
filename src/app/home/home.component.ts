@@ -31,4 +31,7 @@ export class HomeComponent implements OnInit {
     this.categoryToFilter = optionFromMenu;
   }
 
+  getPercent(project){
+    return (project.progress/project.goal)*100 + "%"
+  }
 }

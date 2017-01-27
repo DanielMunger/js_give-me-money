@@ -12,7 +12,7 @@
          <p>Progress: {{(projectToDisplay | async)?.progress}}</p>
          <p>Contributors: {{(projectToDisplay | async)?.contributors}}</p>
        </div>
-       <app-bar-graph [percentComplete]="percentComplete"></app-bar-graph>
+       <app-bar-graph [projectToDisplay]="projectToDisplay"></app-bar-graph>
        <div class="card-action">
            <label>Amount:</label>
            <input #amount name="amount" type="number">

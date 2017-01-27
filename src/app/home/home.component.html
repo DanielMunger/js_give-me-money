@@ -17,6 +17,7 @@
        <div class="card-content">
          <p>{{project.description}}</p>
        </div>
+       <div class="bar" [style.width]="getPercent(project)"></div>
        <div class="card-action">
          <button class="btn" (click)="goToDetailPage(project)">View Details</button>
        </div>

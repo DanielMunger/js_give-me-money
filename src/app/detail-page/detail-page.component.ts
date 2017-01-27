@@ -32,9 +32,8 @@ export class DetailPageComponent implements OnInit {
     var projectObject = null;
     this.projectToDisplay.subscribe(result => {
       projectObject = result
-      console.log("in donate func", projectObject.progress)
-      this.percentComplete = projectObject.progress/projectObject.goal
     });
     this.projectService.addDonation(numberAmount, projectObject)
+    this.percentComplete += 1;
   }
 }
